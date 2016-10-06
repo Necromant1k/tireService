@@ -1,0 +1,942 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>Шина сервис</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="icon" href="favicon.ico" type="image/x-icon">
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
+	<link rel="stylesheet" href="libs/bootstrap/bootstrap-grid.min.css" />
+	<link rel="stylesheet" href="libs/font-awesome/css/font-awesome.min.css" />
+	<link rel="stylesheet" href="libs/owl-carousel/owl.carousel.min.css" />
+	<link rel="stylesheet" href="libs/animate/animate.css" />
+
+	<link rel="stylesheet" href="css/reset.css" />
+	<link rel="stylesheet" href="css/fonts.css" />
+	<link rel="stylesheet" href="css/main.min.css" />
+	<link rel="stylesheet" href="css/media.css" />
+</head>
+<body>
+
+<div class="container">
+    <div class="row">
+        <!-- The Modal -->
+            <div id="authorize_modal" class="modal">
+                <!-- Modal content -->
+                <div class="modal-content col-sm-8 col-md-6 col-xs-12 col-md-offset-3 col-sm-offset-2 col-xs-offset-0">
+                    <div class="modal-header">
+                        <span class="close" id="auth"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 371.2 371.2" width="512" height="512"><polygon points="371.2 21.2 350 0 185.6 164.4 21.2 0 0 21.2 164.4 185.6 0 350 21.2 371.2 185.6 206.8 350 371.2 371.2 350 206.8 185.6 "/></svg></span>
+                    </div>
+                    <div class="modal-body">
+                        <div class="">
+                            <h2>Авторизация</h2>
+                        </div>
+                        <form action="#" class="form-authorization" id="form-auth">
+                            <div class="form-container">
+                                <label for="login">Логин :</label>
+                                <input type="text" name="login" id="login">
+                            </div>
+                            <div class="form-container">
+                                <label for="password">Пароль :</label>
+                                <input type="password" name="password" id="password">
+                            </div>
+                            <a href="#" class="forgot-password"><span>&#42;Забыли пароль?</span></a>
+                            <button type="submit" class="btn">Войти в мой аккаунт</button>
+                        </form>
+                        <div class="missed-values-auth">
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <!-- The Modal -->
+        <div id="registration_modal" class="modal">
+            <!-- Modal content -->
+            <div class="modal-content col-sm-8 col-md-6 col-lg-6 col-lg-offset-3 col-xs-12 col-md-offset-3 col-sm-offset-2 col-xs-offset-0">
+                <div class="modal-header">
+                    <span class="close" id="reg"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 371.2 371.2" width="512" height="512"><polygon points="371.2 21.2 350 0 185.6 164.4 21.2 0 0 21.2 164.4 185.6 0 350 21.2 371.2 185.6 206.8 350 371.2 371.2 350 206.8 185.6 "/></svg></span>
+                </div>
+                <div class="modal-body">
+                    <div class="reg-header">
+                        <h2>Регистрация</h2>
+                        <div class="required">
+                            <span>
+                            &#42; Поля, отмеченные звездочкой, обязательны к заполнению
+                            </span>
+                        </div>
+                    </div>
+                    <form action="#" class="form-authorization" id="form-register">
+                        <div class="form-container">
+                            <label for="login">Логин (мин. 3 символа): <span>&#42;</span></label>
+                            <input type="text" name="login" id="login" class="login">
+                        </div>
+                        <div class="form-container">
+                            <label for="password">Пароль: <span>&#42;</span></label>
+                            <input type="password" name="password" id="password" class="password">
+                        </div>
+                        <div class="form-container">
+                            <label for="password_approve">Подтверждение пароля: <span>&#42;</span></label>
+                            <input type="password" name="password" id="password_approve">
+                        </div>
+                        <div class="form-container">
+                            <label for="email">Адрес e-mail: <span>&#42;</span></label>
+                            <input type="email" name="email" id="email">
+                        </div>
+                        <div class="form-container">
+                            <label for="name">Имя: <span>&#42;</span></label>
+                            <input type="text" name="name" id="name">
+                        </div>
+                        <div class="form-container">
+                            <label for="thirdname">Отчество:</label>
+                            <input type="text" name="thirdname" id="thirdname">
+                        </div>
+                        <div class="form-container">
+                            <label for="lastname">Фамилия: <span>&#42;</span></label>
+                            <input type="text" name="lastname" id="lastname">
+                        </div>
+                        <div class="form-container">
+                            <label for="phone">Телефон: <span>&#42;</span></label>
+                            <input type="number" name="phone" id="phone">
+                        </div>
+                        <div class="form-container deportament">
+                            <input type="checkbox" name="judge" id="another">
+                            <label for="another">Юридическое лицо:</label>
+                        </div>
+
+                        <button type="submit" class="btn">Зарегестрировать меня</button>
+                    </form>
+                    <div class="missed-values-reg">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<header class="navigation">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 col-xs-12 col-sm-12 navigation-container">
+                <div class="nav-menu">
+                    <div class="logo">
+                        <a href="#"><img src="img/logo.jpg" alt=""></a>
+                    </div>
+                    <div class="toggleMenu-wrap"><a class="toggleMenu fa fa-bars" href="#" style="display: none;"></a></div>
+                </div>
+                <div class="nav">
+                    <div class=" search ">
+
+                        <a href="#" id="searchtoggl"><i class="fa fa-search hidden-xs"></i></a>
+
+                        <form id="searchform-mobile" action="#" class="hidden-sm hidden-md hidden-lg">
+                            <button type="submit" id="searchsubmit-mobile" class="fa fa-search search-btn"></button>
+                            <input type="search" name="search" id="inputSearch-mobile" class="inputSearch" autocomplete="off">
+                        </form>
+                    </div>
+                    <ul class="nav-list">
+                        <li class="">
+                            <a href="#1">Сервис</a>
+                        </li >
+                        <li class="">
+                            <a href="#" class="parent">О нас</a>
+                            <ul class="">
+                                <li class=""><a href="news.html">Новости</a></li>
+                                <li class=""><a href="#">Вакансии</a></li>
+                            </ul>
+                        </li>
+                        <li class="">
+                            <a href="textpage.html">Гарантии</a>
+                        </li>
+                        <li class="">
+                            <a href="contacts.html">Контакты</a>
+                        </li>
+                        <li class="sign">
+                            <a href="#" id="signIn">Вход</a>
+                        </li>
+                        <li class="sign">
+                            <a href="#" id="signUp">Регистрация</a>
+                        </li>
+                    </ul>
+                    </div>
+            </div>
+        </div>
+    </div>
+</header>
+<section class="hidden-xs">
+    <div class="container">
+        <div class="row">
+            
+            <div id="searchbar" class="searchBar clearfix " style="display: none;">
+                <form id="searchform" action="#">
+                    <button type="submit" id="searchsubmit" class="fa fa-search search-btn"></button>
+                    <input type="search" name="s" id="inputSearch" class="inputSearch" placeholder="Search" autocomplete="off">
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="main-menu">
+    <div class="container">
+        <div class="row">
+			<span class="col-xs-8 col-xs-offset-4  mobile-bag hidden-sm hidden-md hidden-lg">
+				<span class="col-xs-12 col-sm-12 mobile-bag-wrapper">
+					<a href="basket.html">
+                        <i class="fa fa-shopping-bag">
+                            <span class="pill">3</span>
+                        </i>
+                    </a>
+				</span>
+			</span>
+            <nav class="" id="main-menu-mobile" role="navigation">
+                <a href="#main-menu-mobile" title="Show navigation"><i class="fa fa-plus"></i></a>
+
+                <a href="#" title="Hide navigation"><i class="fa fa-minus"></i></a>
+
+                <ul class="main-menu-container">
+                    <li class="">
+                        <a href="catalog.html">Легковые шины</a>
+                    </li>
+                    <li class="">
+                        <a href="#">Грузовые шины</a>
+                    <li class="">
+                        <a href="#">Легкогрузовые шины</a>
+                    </li>
+                    <li class="">
+                        <a href="#">Для спецтехники</a>
+                    </li>
+                    <li class="store-items">
+                        <a class="hidden-xs" href="basket.html">
+                            <span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512"><path d="m417.9 104.4h-65.5c-2.2-51-44.8-92.4-96.4-92.4s-94.2 41.3-96.5 92.4h-66.5l-30.1 395.6h386.2l-31.2-395.6zm-161.9-71.6c40.1 0 73.5 32 75.7 71.6h-151.4c2.2-39.6 35.6-71.6 75.7-71.6zm-143.3 92.4h46.7v68.5h20.8v-68.5h151.6v68.5h20.8v-68.5h47.8l27 354h-341.7l27-354z" /></svg></span>
+                            <span class="store-items-count">
+                                <span class="store-item-link">Товаров: <span class="store-item-amount">24</span></span>
+                                <span class="store-item-link">Сумма: <span class="store-item-amount">241234 <i class="fa fa-ruble"></i></span></span>
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</section>
+<section class="main-header">
+    <div class="container">
+        <div class="row">
+            <div class="description col-md-5 col-sm-6 col-sm-offset-5 col-xs-12 col-md-offset-7" >
+                <div class="owl-carousel" id="description-header-carousel">
+                    <div class="slide-img" data-slide="url('https://s-media-cache-ak0.pinimg.com/originals/7e/91/78/7e9178d5e96230672d6351f6469e5714.jpg')">
+                        <p class="">Спешите приобрести, только у нас шины Michelin стали доступнее!</p>
+                    </div>
+                    <div class="slide-img" data-slide="url('http://czuprynserwis.pl/wp-content/uploads/2015/09/cars-wheels_00351494.jpg')">
+                        <p class="">Спешите приобрести, только у нас шины Michelin стали доступнее!</p>
+                    </div>
+                    <div class="slide-img" data-slide="url('https://images8.alphacoders.com/441/441250.jpg')">
+                        <p class="">Спешите приобрести, только у нас шины Michelin стали доступнее!</p>
+                    </div>
+                </div>
+                <div class="dots-container-header"></div>
+            </div>
+        </div>
+        <div class="row">
+            <form action="#">
+                    <div class="col-md-12 col-xs-12 col-sm-10 col-xs-offset-0 col-md-offset-0 col-sm-offset-1 filter-container" id="filter">
+                        <div class="row row-no-padding ">
+                            <ul class="filter-buttons">
+                                <li class="filter-header --order-1">
+                                    <a href="#"><img src="img/tires/lightCar.png" style="vertical-align: middle" alt="">
+                                        легковые</a>
+                                </li>
+                                <li class="active filter-header">
+                                    <a href=""><img src="img/tires/lightheavy.png" alt="">
+                                        мото</a>
+                                </li>
+                                <li class="filter-header --order-2">
+                                    <a href=""><img src="img/tires/lightheavy.png" alt="">
+                                        лег.груз</a>
+                                </li>
+                                <li class="filter-header --order-3">
+                                    <a href=""><img src="img/tires/heavyl.png" alt="">
+                                        грузовые</a>
+                                </li>
+                                <li class="filter-header --order-4">
+                                    <a href=""><img src="img/tires/special.png" alt="">
+                                        для спецтехники</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="row dropdown-filter-section">
+                            <div class="col-xs-12">
+                                <div class="col-md-4 col-xs-12">
+                                    <div class="styled-select">
+                                        <select name="" class="dropdown-caret">
+                                            <option value="manufacturer">Производитель</option>
+                                        </select>
+                                        <select name="" class="dropdown-caret">
+                                            <option value="width-tire">Ширина профиля</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-xs-12">
+                                    <div class="styled-select">
+                                        <select name="" class="dropdown-caret">
+                                            <option value="tire-serial">Серия шины</option>
+                    
+                                        </select>
+                                        <select name="" class="dropdown-caret">
+                                            <option value="accept-to-axis">Применяемость по осям</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-xs-12">
+                                    <div class="styled-select">
+                                        <select name="" class="dropdown-caret">
+                                            <option value="seasons">Сезонность</option>
+                                        </select>
+                                        <select name="" class="dropdown-caret">
+                                            <option value="diameter">Посадочный диаметр</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row sorting-section">
+                            <div class="col-xs-12">
+                                <form action="#">
+                                    <div class="col-md-4 col-xs-12">
+                                        <div class="row">
+                                            <div class="col-md-6 col-xs-12">
+                                                <input type="radio" id="byCar" name="sortingRadioGroup">
+                                                <label for="byCar"><span></span>По автомобилю</label>
+                                            </div>
+                                            <div class="col-md-6 col-xs-12">
+                                                <input type="radio" id="byParams" name="sortingRadioGroup">
+                                                <label for="byParams"><span></span>По параметрам</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 col-xs-12">
+                                        <div class="row ">
+                                            <div class="col-md-6 col-xs-12 ">
+                                                <input type="radio" id="byRims" name="sortingRadioGroup">
+                                                <label for="byRims"><span></span>По дискам</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 col-xs-12 btns">
+                                        <div class="row">
+                                            <div class="col-md-6 col-xs-12">
+                                                <button type="submit" class="btn-search">Искать</button>
+                                            </div>
+                                            <div class="col-md-6 col-xs-12">
+                                                <button type="reset"  class="btn-reset">Сбросить</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+            </form>
+        </div>
+    </div>
+</section>
+<section class="special-offer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 col-xs-12 "><h2>Спецпредложение</h2></div>
+            <div class="col-md-6 col-xs-12 col-sm-12 bounce"><a href="#"><img src="img/tires/special/tiresGift-1.png" alt=""></a></div>
+            <div class="col-md-6 col-xs-12 col-sm-12 bounce"><a href="#"><img src="img/tires/special/tiresGift.png" alt=""></a></div>
+        </div>
+    </div>
+</section>
+<section class="catalog-section recommend" id="recommended">
+    <div class="container">
+        <div class="row">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 col-xs-7 col-sm-4"><h2>Рекомендуем</h2></div>
+                    <div class="col-md-2 col-xs-5 col-sm-3 toSection"><a href="#">к разделу<i class="fa fa-arrow-right"></i></a></div>
+                </div>
+            </div>
+            <div class="col-md-3 col-xs-6 col-sm-3 item-tire">
+                <div class="price-wrapper">
+                    <span class="price">850 000 руб.</span>
+                </div>
+                <a href="#">
+                    <img src="img/tires/w130-h180-c-media-catalog-Michelin-Michelin-Primacy-3.jpg" alt="">
+                </a>
+                <div class="description-wrapper col-xs-12">
+                    Грузовая шина 10.00R20
+                    16PR TT АШК Forward Traction
+                </div>
+                <div class="col-md-12 col-xs-12 buy-wrapper">
+                    <a class=" col-md-6 col-xs-12 btn">Купить</a>
+                    <span class="col-md-6 col-xs-12">В наличии</span>
+                </div>
+            </div>
+            <div class="col-md-3 col-xs-6 col-sm-3 item-tire">
+                <div class="price-wrapper">
+                    <span class="price">850 000 руб.</span>
+                </div>
+                <a href="#">
+                    <img src="img/tires/w130-h180-c-media-catalog-Michelin-Michelin-Primacy-3.jpg" alt="">
+                </a>
+                <div class="description-wrapper col-xs-12">
+                    Грузовая шина 10.00R20
+                    16PR TT АШК Forward Traction
+                </div>
+                <div class="col-md-12 col-xs-12 buy-wrapper">
+                    <a class=" col-md-6 col-xs-12 btn">Купить</a>
+                    <span class="col-md-6 col-xs-12">В наличии</span>
+                </div>
+            </div>
+            <div class="col-md-3 col-xs-6 col-sm-3 item-tire">
+                <div class="price-wrapper">
+                    <span class="price">850 000 руб.</span>
+                </div>
+                <a href="#">
+                    <img src="img/tires/w130-h180-c-media-catalog-Michelin-Michelin-Primacy-3.jpg" alt="">
+                </a>
+                <div class="description-wrapper col-xs-12">
+                    Грузовая шина 10.00R20
+                    16PR TT АШК Forward Traction
+                </div>
+                <div class="col-md-12 col-xs-12 buy-wrapper">
+                    <a class=" col-md-6 col-xs-12 btn">Купить</a>
+                    <span class="col-md-6 col-xs-12">В наличии</span>
+                </div>
+            </div>
+            <div class="col-md-3 col-xs-6 col-sm-3 item-tire">
+                <div class="price-wrapper">
+                    <span class="price">850 000 руб.</span>
+                </div>
+                <a href="#">
+                    <img src="img/tires/w130-h180-c-media-catalog-Michelin-Michelin-Primacy-3.jpg" alt="">
+                </a>
+                <div class="description-wrapper col-xs-12">
+                    Грузовая шина 10.00R20
+                    16PR TT АШК Forward Traction
+                </div>
+                <div class="col-md-12 col-xs-12 buy-wrapper">
+                    <a class=" col-md-6 col-xs-12 btn">Купить</a>
+                    <span class="col-md-6 col-xs-12">В наличии</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="catalog-section new-arrivals" id="newArrivals">
+    <div class="container">
+        <div class="row">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-5 col-xs-7 col-sm-7"><h2>Новые поступления</h2></div>
+                        <div class="col-md-2 col-xs-5 col-sm-3 toSection"><a href="#">к разделу<i class="fa fa-arrow-right"></i></a></div>
+                        <div class="row col-md-5  col-xs-12 sort-buttons">
+                            <div class="">
+                                <a href="#" class="sort-btn">По названию</a>
+                            </div>
+                            <div class="">
+                                <a href="#" class="sort-btn">По цене</a>
+                            </div>
+                            <div class="">
+                                <a href="#" class="sort-btn">По популярности</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container-catalog-newarrivals">
+                    <div class="nav-container"></div>
+                <div class="owl-carousel items-container" id="new-arrivals-carousel">
+                    <div class= "item item-tire">
+                            <div class="price-wrapper">
+                                <span class="price">850 000 руб.</span>
+                            </div>                            <a href="#">
+                                <img src="img/tires/w130-h180-c-media-catalog-Michelin-Michelin-Primacy-3.jpg" alt="">
+                            </a>
+                            <div class="description-wrapper ">
+                                Грузовая шина 10.00R20
+                                16PR TT АШК Forward Traction
+                            </div>
+                            <div class="col-md-12 col-xs-12 buy-wrapper">
+                                <a class=" col-md-12 col-xs-12 btn">Купить</a>
+                                <span class="col-md-12 col-xs-12">В наличии</span>
+                            </div>
+                        </div>
+                    <div class= "item item-tire">
+                        <div class="price-wrapper">
+                            <span class="price">850 000 руб.</span>
+                        </div>                            <a href="#">
+                        <img src="img/tires/w130-h180-c-media-catalog-Michelin-Michelin-Primacy-3.jpg" alt="">
+                    </a>
+                        <div class="description-wrapper ">
+                            Грузовая шина 10.00R20
+                            16PR TT АШК Forward Traction
+                        </div>
+                        <div class="col-md-12 col-xs-12 buy-wrapper">
+                            <a class=" col-md-12 col-xs-12 btn">Купить</a>
+                            <span class="col-md-12 col-xs-12">В наличии</span>
+                        </div>
+                    </div>
+                    <div class= "item item-tire">
+                        <div class="price-wrapper">
+                            <span class="price">850 000 руб.</span>
+                        </div>                            <a href="#">
+                        <img src="img/tires/w130-h180-c-media-catalog-Michelin-Michelin-Primacy-3.jpg" alt="">
+                    </a>
+                        <div class="description-wrapper ">
+                            Грузовая шина 10.00R20
+                            16PR TT АШК Forward Traction
+                        </div>
+                        <div class="col-md-12 col-xs-12 buy-wrapper">
+                            <a class=" col-md-12 col-xs-12 btn">Купить</a>
+                            <span class="col-md-12 col-xs-12">В наличии</span>
+                        </div>
+                    </div>
+                    <div class= "item item-tire">
+                        <div class="price-wrapper">
+                            <span class="price">850 000 руб.</span>
+                        </div>                            <a href="#">
+                        <img src="img/tires/w130-h180-c-media-catalog-Michelin-Michelin-Primacy-3.jpg" alt="">
+                    </a>
+                        <div class="description-wrapper ">
+                            Грузовая шина 10.00R20
+                            16PR TT АШК Forward Traction
+                        </div>
+                        <div class="col-md-12 col-xs-12 buy-wrapper">
+                            <a class=" col-md-12 col-xs-12 btn">Купить</a>
+                            <span class="col-md-12 col-xs-12">В наличии</span>
+                        </div>
+                    </div>
+                    <div class= "item item-tire">
+                        <div class="price-wrapper">
+                            <span class="price">850 000 руб.</span>
+                        </div>                            <a href="#">
+                        <img src="img/tires/w130-h180-c-media-catalog-Michelin-Michelin-Primacy-3.jpg" alt="">
+                    </a>
+                        <div class="description-wrapper ">
+                            Грузовая шина 10.00R20
+                            16PR TT АШК Forward Traction
+                        </div>
+                        <div class="col-md-12 col-xs-12 buy-wrapper">
+                            <a class=" col-md-12 col-xs-12 btn">Купить</a>
+                            <span class="col-md-12 col-xs-12">В наличии</span>
+                        </div>
+                    </div>
+                </div>
+                </div>
+        </div>
+    </div>
+</section>
+<section class="clients" id="clients">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 col-xs-12">
+                <h2>Что говорят о нас клиенты</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="owl-carousel" id="clients-carousel">
+                        <div class="col-md-12 col-xs-12 col-sm-12 item">
+                            <div class="col-md-4 col-xs-12 client-photo">
+                                <img src="img/clients/client-1.png" alt="">
+                            </div>
+                            <div class="col-md-8 col-xs-12 review-container">
+                                <h2 class="name">Татьяна Коковко</h2>
+                                <p class="feedback">
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, at consequatur consequuntur culpa dicta eveniet fugiat laboriosam obcaecati optio placeat praesentium quia quidem tempore temporibus?
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-md-12 col-xs-12 col-sm-12 item">
+                            <div class="col-md-4 col-xs-12 client-photo">
+                                <img src="img/clients/client-1.png" alt="">
+                            </div>
+                            <div class="col-md-8 col-xs-12 review-container">
+                                <h2 class="name">Николай Коковко</h2>
+                                <p class="feedback">
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, at consequatur consequuntur culpa dicta eveniet fugiat laboriosam obcaecati optio placeat praesentium quia quidem tempore temporibus?
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-md-12 col-xs-12 col-sm-12 item">
+                            <div class="col-md-4 col-xs-12 client-photo">
+                                <img src="img/clients/client-1.png" alt="">
+                            </div>
+                            <div class="col-md-8 col-xs-12 review-container">
+                                <h2 class="name">Татьяна Коковко</h2>
+                                <p class="feedback">
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, at consequatur consequuntur culpa dicta eveniet fugiat laboriosam obcaecati optio placeat praesentium quia quidem tempore temporibus?
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-md-12 col-xs-12 col-sm-12 item">
+                            <div class="col-md-4 col-xs-12 client-photo">
+                                <img src="img/clients/client-1.png" alt="">
+                            </div>
+                            <div class="col-md-8 col-xs-12 review-container">
+                                <h2 class="name">Николай Коковко</h2>
+                                <p class="feedback">
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, at consequatur consequuntur culpa dicta eveniet fugiat laboriosam obcaecati optio placeat praesentium quia quidem tempore temporibus?
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-md-12 col-xs-12 col-sm-12 item">
+                            <div class="col-md-4 col-xs-12 client-photo">
+                                <img src="img/clients/client-1.png" alt="">
+                            </div>
+                            <div class="col-md-8 col-xs-12 review-container">
+                                <h2 class="name">Татьяна Коковко</h2>
+                                <p class="feedback">
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, at consequatur consequuntur culpa dicta eveniet fugiat laboriosam obcaecati optio placeat praesentium quia quidem tempore temporibus?
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-md-12 col-xs-12 col-sm-12 item">
+                            <div class="col-md-4 col-xs-12 client-photo">
+                                <img src="img/clients/client-1.png" alt="">
+                            </div>
+                            <div class="col-md-8 col-xs-12 review-container">
+                                <h2 class="name">Николай Коковко</h2>
+                                <p class="feedback">
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, at consequatur consequuntur culpa dicta eveniet fugiat laboriosam obcaecati optio placeat praesentium quia quidem tempore temporibus?
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-md-12 col-xs-12 col-sm-12 item">
+                            <div class="col-md-4 col-xs-12 client-photo">
+                                <img src="img/clients/client-1.png" alt="">
+                            </div>
+                            <div class="col-md-8 col-xs-12 review-container">
+                                <h2 class="name">Татьяна Коковко</h2>
+                                <p class="feedback">
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, at consequatur consequuntur culpa dicta eveniet fugiat laboriosam obcaecati optio placeat praesentium quia quidem tempore temporibus?
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-md-12 col-xs-12 col-sm-12 item">
+                            <div class="col-md-4 col-xs-12 client-photo">
+                                <img src="img/clients/client-1.png" alt="">
+                            </div>
+                            <div class="col-md-8 col-xs-12 review-container">
+                                <h2 class="name">Николай Коковко</h2>
+                                <p class="feedback">
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, at consequatur consequuntur culpa dicta eveniet fugiat laboriosam obcaecati optio placeat praesentium quia quidem tempore temporibus?
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="dots-container">
+
+                </div>
+            </div>
+        </div>
+</section>
+<section class="company">
+    <div class="container tabs">
+        <div class="row" id="">
+            <div class="col-md-9 col-xs-12 col-sm-8" id="companyText">
+                <div class="row tab">
+                    <div class="col-md-6 col-xs-6 col-sm-6"><h2><a href="#aboutCompany" class="active service-link tablinks">О компании</a></h2></div>
+                    <div class="col-md-6 col-xs-6 col-sm-6"><a href="#service" class="service-link tablinks">Сервис</a></div>
+                </div>
+                <div class="row tabcontent" id="aboutCompany">
+                    <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab accusamus accusantium amet commodi
+                        deserunt dolor doloremque est eum excepturi, exercitationem harum inventore mollitia nisi quis
+                        repellendus reprehenderit repudiandae sunt, tenetur?
+                    </div>
+                    <div>Accusantium consequuntur dolores error ipsam natus, nesciunt nobis quae quod ut. A accusamus
+                        dolorem eos laborum modi mollitia, nam obcaecati odio, quaerat quam quibusdam sint tenetur vel
+                        vero voluptas voluptate?
+                    </div>
+                    <div>A ad distinctio ducimus exercitationem ullam! Accusamus ad aut corporis dicta doloremque eaque
+                        eos harum, ipsa nobis nostrum pariatur placeat praesentium quos ratione reprehenderit saepe sed
+                        vitae voluptate voluptates voluptatibus.
+                    </div>
+                </div>
+                <div class="row tabcontent" id="service">
+                    <div class="row service-sorting row-no-padding tab">
+                        <div class=""><a href="#repairEngine" class=" deep-tab-link" >Ремонт двигателей</a></div>
+                        <div class=""><a href="#repairTransmission" class="deep-tab-link" >РЕМОНТ ТРАНСМИССИИ</a></div>
+                        <div class=""><a href="#repairChassis" class="deep-tab-link" >РЕМОНТ ХОДОВОЙ</a></div>
+                        <div class=""><a href="#spareParts" class="deep-tab-link" >ЗАПАСНЫЕ ЧАСТИ</a></div>
+                    </div>
+                    <div class="row service-description  deep-tab-content" id="repairEngine">
+                        <div class="col-md-12 col-xs-12 service-description-wrapper">
+                            <span class="svg-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52"><path d="M26 0C11.7 0 0 11.7 0 26s11.7 26 26 26 26-11.7 26-26S40.3 0 26 0zM26 50C12.8 50 2 39.2 2 26S12.8 2 26 2s24 10.8 24 24S39.2 50 26 50z"/><path d="M38.3 15.3l-15.4 17.3 -9.3-7.4c-0.4-0.3-1.1-0.3-1.4 0.2 -0.3 0.4-0.3 1.1 0.2 1.4l10 8C22.6 34.9 22.8 35 23 35c0.3 0 0.6-0.1 0.7-0.3l16-18c0.4-0.4 0.3-1-0.1-1.4C39.3 14.9 38.6 14.9 38.3 15.3z"/></svg>
+                            </span>
+                            <p>
+                                ремонт блока цилиндров — осуществляется замена или растачивание цилиндров до необходимого
+                                размера, выравнивается привалочная плоскость, ремонтируются постели коленчатого вала.
+                            </p>
+                        </div>
+                        <div class="col-md-12 col-xs-12 service-description-wrapper">
+                        <span class="svg-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52"><path d="M26 0C11.7 0 0 11.7 0 26s11.7 26 26 26 26-11.7 26-26S40.3 0 26 0zM26 50C12.8 50 2 39.2 2 26S12.8 2 26 2s24 10.8 24 24S39.2 50 26 50z"/><path d="M38.3 15.3l-15.4 17.3 -9.3-7.4c-0.4-0.3-1.1-0.3-1.4 0.2 -0.3 0.4-0.3 1.1 0.2 1.4l10 8C22.6 34.9 22.8 35 23 35c0.3 0 0.6-0.1 0.7-0.3l16-18c0.4-0.4 0.3-1-0.1-1.4C39.3 14.9 38.6 14.9 38.3 15.3z"/></svg>
+                        </span>
+                            <p>
+                                ремонт блока цилиндров — осуществляется замена или растачивание цилиндров до необходимого
+                                размера, выравнивается привалочная плоскость, ремонтируются постели коленчатого вала.
+                            </p>
+                        </div>
+                        <div class="col-md-12 col-xs-12 service-description-wrapper">
+                        <span class="svg-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52"><path d="M26 0C11.7 0 0 11.7 0 26s11.7 26 26 26 26-11.7 26-26S40.3 0 26 0zM26 50C12.8 50 2 39.2 2 26S12.8 2 26 2s24 10.8 24 24S39.2 50 26 50z"/><path d="M38.3 15.3l-15.4 17.3 -9.3-7.4c-0.4-0.3-1.1-0.3-1.4 0.2 -0.3 0.4-0.3 1.1 0.2 1.4l10 8C22.6 34.9 22.8 35 23 35c0.3 0 0.6-0.1 0.7-0.3l16-18c0.4-0.4 0.3-1-0.1-1.4C39.3 14.9 38.6 14.9 38.3 15.3z"/></svg>
+                        </span>
+                            <p>
+                                ремонт блока цилиндров — осуществляется замена или растачивание цилиндров до необходимого
+                                размера, выравнивается привалочная плоскость, ремонтируются постели коленчатого вала.
+                            </p>
+                        </div>
+                        <div class="col-md-3 col-xs-12 col-sm-4">
+                            <a href="#" class="btn">Читать больше</a>
+                        </div>
+                    </div>
+                    <div class="row service-description  deep-tab-content" id="repairTransmission">
+                        <div class="col-md-12 col-xs-12 service-description-wrapper">
+                            <span class="svg-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52"><path d="M26 0C11.7 0 0 11.7 0 26s11.7 26 26 26 26-11.7 26-26S40.3 0 26 0zM26 50C12.8 50 2 39.2 2 26S12.8 2 26 2s24 10.8 24 24S39.2 50 26 50z"/><path d="M38.3 15.3l-15.4 17.3 -9.3-7.4c-0.4-0.3-1.1-0.3-1.4 0.2 -0.3 0.4-0.3 1.1 0.2 1.4l10 8C22.6 34.9 22.8 35 23 35c0.3 0 0.6-0.1 0.7-0.3l16-18c0.4-0.4 0.3-1-0.1-1.4C39.3 14.9 38.6 14.9 38.3 15.3z"/></svg>
+                            </span>
+                            <p>
+                                ремонт блока цилиндров — осуществляется замена или растачивание цилиндров до необходимого
+                                размера, выравнивается привалочная плоскость, ремонтируются постели коленчатого вала.
+                            </p>
+                        </div>
+                        <div class="col-md-12 col-xs-12 service-description-wrapper">
+                        <span class="svg-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52"><path d="M26 0C11.7 0 0 11.7 0 26s11.7 26 26 26 26-11.7 26-26S40.3 0 26 0zM26 50C12.8 50 2 39.2 2 26S12.8 2 26 2s24 10.8 24 24S39.2 50 26 50z"/><path d="M38.3 15.3l-15.4 17.3 -9.3-7.4c-0.4-0.3-1.1-0.3-1.4 0.2 -0.3 0.4-0.3 1.1 0.2 1.4l10 8C22.6 34.9 22.8 35 23 35c0.3 0 0.6-0.1 0.7-0.3l16-18c0.4-0.4 0.3-1-0.1-1.4C39.3 14.9 38.6 14.9 38.3 15.3z"/></svg>
+                        </span>
+                            <p>
+                                ремонт блока цилиндров — осуществляется замена или растачивание цилиндров до необходимого
+                                размера, выравнивается привалочная плоскость, ремонтируются постели коленчатого вала.
+                            </p>
+                        </div>
+                        <div class="col-md-12 col-xs-12 service-description-wrapper">
+                        <span class="svg-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52"><path d="M26 0C11.7 0 0 11.7 0 26s11.7 26 26 26 26-11.7 26-26S40.3 0 26 0zM26 50C12.8 50 2 39.2 2 26S12.8 2 26 2s24 10.8 24 24S39.2 50 26 50z"/><path d="M38.3 15.3l-15.4 17.3 -9.3-7.4c-0.4-0.3-1.1-0.3-1.4 0.2 -0.3 0.4-0.3 1.1 0.2 1.4l10 8C22.6 34.9 22.8 35 23 35c0.3 0 0.6-0.1 0.7-0.3l16-18c0.4-0.4 0.3-1-0.1-1.4C39.3 14.9 38.6 14.9 38.3 15.3z"/></svg>
+                        </span>
+                            <p>
+                                ремонт блока цилиндров — осуществляется замена или растачивание цилиндров до необходимого
+                                размера, выравнивается привалочная плоскость, ремонтируются постели коленчатого вала.
+                            </p>
+                        </div>
+                        <div class="col-md-3 col-xs-12 col-sm-4">
+                            <a href="#" class="btn">Читать больше</a>
+                        </div>
+                    </div>
+                    <div class="row service-description  deep-tab-content" id="repairChassis">
+                        <div class="col-md-12 col-xs-12 service-description-wrapper">
+                            <span class="svg-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52"><path d="M26 0C11.7 0 0 11.7 0 26s11.7 26 26 26 26-11.7 26-26S40.3 0 26 0zM26 50C12.8 50 2 39.2 2 26S12.8 2 26 2s24 10.8 24 24S39.2 50 26 50z"/><path d="M38.3 15.3l-15.4 17.3 -9.3-7.4c-0.4-0.3-1.1-0.3-1.4 0.2 -0.3 0.4-0.3 1.1 0.2 1.4l10 8C22.6 34.9 22.8 35 23 35c0.3 0 0.6-0.1 0.7-0.3l16-18c0.4-0.4 0.3-1-0.1-1.4C39.3 14.9 38.6 14.9 38.3 15.3z"/></svg>
+                            </span>
+                            <p>
+                                ремонт блока цилиндров — осуществляется замена или растачивание цилиндров до необходимого
+                                размера, выравнивается привалочная плоскость, ремонтируются постели коленчатого вала.
+                            </p>
+                        </div>
+                        <div class="col-md-12 col-xs-12 service-description-wrapper">
+                        <span class="svg-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52"><path d="M26 0C11.7 0 0 11.7 0 26s11.7 26 26 26 26-11.7 26-26S40.3 0 26 0zM26 50C12.8 50 2 39.2 2 26S12.8 2 26 2s24 10.8 24 24S39.2 50 26 50z"/><path d="M38.3 15.3l-15.4 17.3 -9.3-7.4c-0.4-0.3-1.1-0.3-1.4 0.2 -0.3 0.4-0.3 1.1 0.2 1.4l10 8C22.6 34.9 22.8 35 23 35c0.3 0 0.6-0.1 0.7-0.3l16-18c0.4-0.4 0.3-1-0.1-1.4C39.3 14.9 38.6 14.9 38.3 15.3z"/></svg>
+                        </span>
+                            <p>
+                                ремонт блока цилиндров — осуществляется замена или растачивание цилиндров до необходимого
+                                размера, выравнивается привалочная плоскость, ремонтируются постели коленчатого вала.
+                            </p>
+                        </div>
+                        <div class="col-md-12 col-xs-12 service-description-wrapper">
+                        <span class="svg-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52"><path d="M26 0C11.7 0 0 11.7 0 26s11.7 26 26 26 26-11.7 26-26S40.3 0 26 0zM26 50C12.8 50 2 39.2 2 26S12.8 2 26 2s24 10.8 24 24S39.2 50 26 50z"/><path d="M38.3 15.3l-15.4 17.3 -9.3-7.4c-0.4-0.3-1.1-0.3-1.4 0.2 -0.3 0.4-0.3 1.1 0.2 1.4l10 8C22.6 34.9 22.8 35 23 35c0.3 0 0.6-0.1 0.7-0.3l16-18c0.4-0.4 0.3-1-0.1-1.4C39.3 14.9 38.6 14.9 38.3 15.3z"/></svg>
+                        </span>
+                            <p>
+                                ремонт блока цилиндров — осуществляется замена или растачивание цилиндров до необходимого
+                                размера, выравнивается привалочная плоскость, ремонтируются постели коленчатого вала.
+                            </p>
+                        </div>
+                        <div class="col-md-3 col-xs-12 col-sm-4">
+                            <a href="#" class="btn">Читать больше</a>
+                        </div>
+                    </div>
+                    <div class="row service-description  deep-tab-content" id="spareParts">
+                        <div class="col-md-12 col-xs-12 service-description-wrapper">
+                            <span class="svg-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52"><path d="M26 0C11.7 0 0 11.7 0 26s11.7 26 26 26 26-11.7 26-26S40.3 0 26 0zM26 50C12.8 50 2 39.2 2 26S12.8 2 26 2s24 10.8 24 24S39.2 50 26 50z"/><path d="M38.3 15.3l-15.4 17.3 -9.3-7.4c-0.4-0.3-1.1-0.3-1.4 0.2 -0.3 0.4-0.3 1.1 0.2 1.4l10 8C22.6 34.9 22.8 35 23 35c0.3 0 0.6-0.1 0.7-0.3l16-18c0.4-0.4 0.3-1-0.1-1.4C39.3 14.9 38.6 14.9 38.3 15.3z"/></svg>
+                            </span>
+                            <p>
+                                ремонт блока цилиндров — осуществляется замена или растачивание цилиндров до необходимого
+                                размера, выравнивается привалочная плоскость, ремонтируются постели коленчатого вала.
+                            </p>
+                        </div>
+                        <div class="col-md-12 col-xs-12 service-description-wrapper">
+                        <span class="svg-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52"><path d="M26 0C11.7 0 0 11.7 0 26s11.7 26 26 26 26-11.7 26-26S40.3 0 26 0zM26 50C12.8 50 2 39.2 2 26S12.8 2 26 2s24 10.8 24 24S39.2 50 26 50z"/><path d="M38.3 15.3l-15.4 17.3 -9.3-7.4c-0.4-0.3-1.1-0.3-1.4 0.2 -0.3 0.4-0.3 1.1 0.2 1.4l10 8C22.6 34.9 22.8 35 23 35c0.3 0 0.6-0.1 0.7-0.3l16-18c0.4-0.4 0.3-1-0.1-1.4C39.3 14.9 38.6 14.9 38.3 15.3z"/></svg>
+                        </span>
+                            <p>
+                                ремонт блока цилиндров — осуществляется замена или растачивание цилиндров до необходимого
+                                размера, выравнивается привалочная плоскость, ремонтируются постели коленчатого вала.
+                            </p>
+                        </div>
+                        <div class="col-md-12 col-xs-12 service-description-wrapper">
+                        <span class="svg-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52"><path d="M26 0C11.7 0 0 11.7 0 26s11.7 26 26 26 26-11.7 26-26S40.3 0 26 0zM26 50C12.8 50 2 39.2 2 26S12.8 2 26 2s24 10.8 24 24S39.2 50 26 50z"/><path d="M38.3 15.3l-15.4 17.3 -9.3-7.4c-0.4-0.3-1.1-0.3-1.4 0.2 -0.3 0.4-0.3 1.1 0.2 1.4l10 8C22.6 34.9 22.8 35 23 35c0.3 0 0.6-0.1 0.7-0.3l16-18c0.4-0.4 0.3-1-0.1-1.4C39.3 14.9 38.6 14.9 38.3 15.3z"/></svg>
+                        </span>
+                            <p>
+                                ремонт блока цилиндров — осуществляется замена или растачивание цилиндров до необходимого
+                                размера, выравнивается привалочная плоскость, ремонтируются постели коленчатого вала.
+                            </p>
+                        </div>
+                        <div class="col-md-3 col-xs-12 col-sm-4">
+                            <a href="#" class="btn">Читать больше</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-xs-12 col-sm-4 hidden-xs" id="companyCerificate">
+                <img src="img/about/cetificate.png" alt="">
+            </div>
+        </div>
+    </div>
+</section>
+<section class="onPhone" id="onPhone">
+    <div class="container">
+        <div class="row onPhone-container">
+            <div class="onPhone-wrapper">
+                <div class="link-wrapper">
+                    <a href="#">
+                        <span class="onPhone-image"><img src="img/icons/phone.png" alt=""></span>
+                        <span>
+                            <span  class="onPhone-link">Написать письмо</span>
+                            <span class="onPhone-description">Напишите свои пожелания нам!</span>
+                        </span>
+
+                    </a>
+                </div>
+            </div>
+            <div class="onPhone-wrapper">
+                <div class="link-wrapper">
+                    <a href="#">
+                        <span class="onPhone-image"><img src="img/icons/message.png" alt=""></span>
+                        <span>
+                            <span class="onPhone-link">Написать письмо</span>
+                            <span class="onPhone-description">Напишите свои пожелания нам!</span>
+                        </span>
+
+                    </a>
+                </div>
+            </div>
+            <div class="onPhone-wrapper">
+                <div class="link-wrapper">
+                    <a href="#">
+                        <span class="onPhone-image"><img src="img/icons/car.png" alt=""></span>
+                        <span>
+                            <span class="onPhone-link">Написать письмо</span>
+                            <span class="onPhone-description">Напишите свои пожелания нам!</span>
+                        </span>
+
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="subdivision" id="subDivision">
+    <div class="container tabs">
+        <div class="row header-subdivision">
+            <div class="col-md-4 col-xs-6">
+                <h2><a href="#subdivisions" class="active tablinks">Наши филиалы</a></h2>
+            </div>
+            <div class="col-md-4 col-xs-6">
+                <h2><a href="#phones" class="tablinks">Телефоны</a></h2>
+            </div>
+        </div>
+        <div class="row subdivision-wrapper tabcontent" id="subdivisions">
+            <div class="col-md-6 col-xs-12">
+                <div id="map" class="map"></div>
+            </div>
+            <div class="col-md-6 col-xs-12 ">
+                <ul class="subdivision-contacts">
+                    <li class="subdiv-name active" data-latitude="56.142090" data-longitude="40.365287">
+                        <h3>Филиал "Владимир"</h3>
+                        <p><span class="city"><i class="fa fa-home"></i>город Владимир Строителей пр-т. Дом 20а корп. Автофакел</span></p>
+                        <p><span><i class="fa fa-phone"></i>8 920-919-77-12</span></p>
+                    </li>
+                    <li class="subdiv-name" data-latitude="55.557153" data-longitude="42.012054">
+                        <h3 >Филиал "Муром""</h3>
+                        <p><span class="city"><i class="fa fa-home"></i>г. Муром, Меленковское шоссе, 21 б</span></p>
+                        <p><span><i class="fa fa-phone"></i>8 920-919-77-12</span></p>
+                    </li>
+                    <li class="subdiv-name">
+                        <h3 >Филиал "Ковров""</h3>
+                        <p><span class="city"><i class="fa fa-home"></i>"Волга" Владимирская обл. </span></p>
+                        <p><span><i class="fa fa-phone"></i>8 920-919-77-12</span></p>
+                    </li>
+                    <li class="subdiv-name" data-latitude="56.142090" data-longitude="40.365287">
+                        <h3>Филиал "Владимир"</h3>
+                        <p><span class="city"><i class="fa fa-home"></i>город Владимир Строителей пр-т. Дом 20а корп. Автофакел</span></p>
+                        <p><span><i class="fa fa-phone"></i>8 920-919-77-12</span></p>
+                    </li>
+                    <li class="subdiv-name" data-latitude="56.142090" data-longitude="40.365287">
+                        <h3>Филиал "Владимир"</h3>
+                        <p><span class="city"><i class="fa fa-home"></i>город Владимир Строителей пр-т. Дом 20а корп. Автофакел</span></p>
+                        <p><span><i class="fa fa-phone"></i>8 920-919-77-12</span></p>
+                    </li>
+                    <li class="subdiv-name" data-latitude="56.142090" data-longitude="40.365287">
+                        <h3>Филиал "Владимир"</h3>
+                        <p><span class="city"><i class="fa fa-home"></i>город Владимир Строителей пр-т. Дом 20а корп. Автофакел</span></p>
+                        <p><span><i class="fa fa-phone"></i>8 920-919-77-12</span></p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="row subdivision-wrapper tabcontent" id="phones">
+           <div class="col-xs-12">
+               Близких, которые случайным образом оказались в окнах видимости между облаками пылевой. Источниками радиоизлучения состоит в выдвинута гипотеза. Оказались в том, что положение источника радиоизлучения. Том, что дискретными источниками радиоизлучения. Определяется с эти­ми источниками радиоизлучения обнаруживалось бы. оказались в тех площадках. Можно надеяться на две группы могли бы. Две группы могли бы каждая из яркие объекты, например звезды первой труппы.
+           </div>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 col-xs-12">
+                <p>2014г. ООО “Шина-сервис” Все права защищены</p>
+                <p>Копирование материалов с сайта без согласия правообладателей запрещено.</p>
+
+            </div>
+        </div>
+    </div>
+</footer>
+
+<div class="hidden"></div>
+<!--[if lt IE 9]>
+<script src="libs/html5shiv/es5-shim.min.js"></script>
+<script src="libs/html5shiv/html5shiv.min.js"></script>
+<script src="libs/html5shiv/html5shiv-printshiv.min.js"></script>
+<![endif]-->
+<script src="libs/respond/respond.min.js"></script>
+<script src="libs/jquery/jquery-2.2.4.min.js"></script>
+<script src="libs/owl-carousel/owl.carousel.min.js"></script>
+<script src="libs/modernizr/modernizr.custom.js"></script>
+<script src="libs/doubleTap/doubleTap.js"></script>
+<script src="libs/waypoints/jquery.waypoints.min.js"></script>
+<script type="text/javascript"
+		src="https://maps.googleapis.com/maps/api/js?sensor=false">
+</script>
+<script src="libs/jquery-validation/jquery.validate.min.js"></script>
+
+<script src="js/googleMaps.js"></script>
+
+<script src="js/common.js"></script>
+<!-- Yandex.Metrika counter --><!-- /Yandex.Metrika counter -->
+<!-- Google Analytics counter --><!-- /Google Analytics counter -->
+</body>
+</html>

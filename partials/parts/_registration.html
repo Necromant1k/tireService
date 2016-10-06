@@ -1,0 +1,65 @@
+<div class="container">
+    <div class="row">
+        <!-- The Modal -->
+        <div id="registration_modal" class="modal">
+            <!-- Modal content -->
+            <div class="modal-content col-sm-8 col-md-6 col-lg-6 col-lg-offset-3 col-xs-12 col-md-offset-3 col-sm-offset-2 col-xs-offset-0">
+                <div class="modal-header">
+                    <span class="close" id="reg"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 371.2 371.2" width="512" height="512"><polygon points="371.2 21.2 350 0 185.6 164.4 21.2 0 0 21.2 164.4 185.6 0 350 21.2 371.2 185.6 206.8 350 371.2 371.2 350 206.8 185.6 "/></svg></span>
+                </div>
+                <div class="modal-body">
+                    <div class="reg-header">
+                        <h2>Регистрация</h2>
+                        <div class="required">
+                            <span>
+                            &#42; Поля, отмеченные звездочкой, обязательны к заполнению
+                            </span>
+                        </div>
+                    </div>
+                    <form action="#" class="form-authorization" id="form-register">
+                        <div class="form-container">
+                            <label for="login">Логин (мин. 3 символа): <span>&#42;</span></label>
+                            <input type="text" name="login" id="login" class="login">
+                        </div>
+                        <div class="form-container">
+                            <label for="password">Пароль: <span>&#42;</span></label>
+                            <input type="password" name="password" id="password" class="password">
+                        </div>
+                        <div class="form-container">
+                            <label for="password_approve">Подтверждение пароля: <span>&#42;</span></label>
+                            <input type="password" name="password" id="password_approve">
+                        </div>
+                        <div class="form-container">
+                            <label for="email">Адрес e-mail: <span>&#42;</span></label>
+                            <input type="email" name="email" id="email">
+                        </div>
+                        <div class="form-container">
+                            <label for="name">Имя: <span>&#42;</span></label>
+                            <input type="text" name="name" id="name">
+                        </div>
+                        <div class="form-container">
+                            <label for="thirdname">Отчество:</label>
+                            <input type="text" name="thirdname" id="thirdname">
+                        </div>
+                        <div class="form-container">
+                            <label for="lastname">Фамилия: <span>&#42;</span></label>
+                            <input type="text" name="lastname" id="lastname">
+                        </div>
+                        <div class="form-container">
+                            <label for="phone">Телефон: <span>&#42;</span></label>
+                            <input type="number" name="phone" id="phone">
+                        </div>
+                        <div class="form-container deportament">
+                            <input type="checkbox" name="judge" id="another">
+                            <label for="another">Юридическое лицо:</label>
+                        </div>
+
+                        <button type="submit" class="btn">Зарегестрировать меня</button>
+                    </form>
+                    <div class="missed-values-reg">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

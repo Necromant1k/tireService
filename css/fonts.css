@@ -1,0 +1,6 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:300italic,300&subset=latin,cyrillic);
+@font-face {
+  font-family: "Days";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../fonts/Days.eot?#iefix") format("embedded-opentype"), url("../fonts/Days.woff2") format("woff2"), url("../fonts/Days.woff") format("woff"), url("../fonts/Days.ttf") format("truetype"), url("../fonts/Days.svg#Days") format("svg"); }

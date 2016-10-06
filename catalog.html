@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Шина сервис</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="favicon.png" />
+    <link rel="stylesheet" href="libs/bootstrap/bootstrap-grid.min.css" />
+    <link rel="stylesheet" href="libs/font-awesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="libs/owl-carousel/owl.carousel.min.css" />
+    <link rel="stylesheet" href="libs/animate/animate.css" />
+
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/fonts.css" />
+    <link rel="stylesheet" href="css/main.min.css" />
+    <link rel="stylesheet" href="css/media.css" />
+
+</head>
+<body>
+
+<header class="navigation">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 col-xs-12 col-sm-12 navigation-container">
+                <div class="nav-menu">
+                    <div class="logo">
+                        <a href="#"><img src="img/logo.jpg" alt=""></a>
+                    </div>
+                    <div class="toggleMenu-wrap"><a class="toggleMenu fa fa-bars" href="#" style="display: none;"></a></div>
+                </div>
+                <div class="nav">
+                    <div class=" search ">
+
+                        <a href="#" id="searchtoggl"><i class="fa fa-search hidden-xs"></i></a>
+
+                        <form id="searchform-mobile" action="#" class="hidden-sm hidden-md hidden-lg">
+                            <button type="submit" id="searchsubmit-mobile" class="fa fa-search search-btn"></button>
+                            <input type="search" name="search" id="inputSearch-mobile" class="inputSearch" autocomplete="off">
+                        </form>
+                    </div>
+                    <ul class="nav-list">
+                        <li class="">
+                            <a href="#1">Сервис</a>
+                        </li >
+                        <li class="">
+                            <a href="#" class="parent">О нас</a>
+                            <ul class="">
+                                <li class=""><a href="news.html">Новости</a></li>
+                                <li class=""><a href="#">Вакансии</a></li>
+                            </ul>
+                        </li>
+                        <li class="">
+                            <a href="textpage.html">Гарантии</a>
+                        </li>
+                        <li class="">
+                            <a href="contacts.html">Контакты</a>
+                        </li>
+                        <li class="sign">
+                            <a href="#" id="signIn">Вход</a>
+                        </li>
+                        <li class="sign">
+                            <a href="#" id="signUp">Регистрация</a>
+                        </li>
+                    </ul>
+                    </div>
+            </div>
+        </div>
+    </div>
+</header>
+<section class="hidden-xs">
+    <div class="container">
+        <div class="row">
+            
+            <div id="searchbar" class="searchBar clearfix " style="display: none;">
+                <form id="searchform" action="#">
+                    <button type="submit" id="searchsubmit" class="fa fa-search search-btn"></button>
+                    <input type="search" name="s" id="inputSearch" class="inputSearch" placeholder="Search" autocomplete="off">
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="main-menu">
+    <div class="container">
+        <div class="row">
+			<span class="col-xs-8 col-xs-offset-4  mobile-bag hidden-sm hidden-md hidden-lg">
+				<span class="col-xs-12 col-sm-12 mobile-bag-wrapper">
+					<a href="basket.html">
+                        <i class="fa fa-shopping-bag">
+                            <span class="pill">3</span>
+                        </i>
+                    </a>
+				</span>
+			</span>
+            <nav class="" id="main-menu-mobile" role="navigation">
+                <a href="#main-menu-mobile" title="Show navigation"><i class="fa fa-plus"></i></a>
+
+                <a href="#" title="Hide navigation"><i class="fa fa-minus"></i></a>
+
+                <ul class="main-menu-container">
+                    <li class="">
+                        <a href="catalog.html">Легковые шины</a>
+                    </li>
+                    <li class="">
+                        <a href="#">Грузовые шины</a>
+                    <li class="">
+                        <a href="#">Легкогрузовые шины</a>
+                    </li>
+                    <li class="">
+                        <a href="#">Для спецтехники</a>
+                    </li>
+                    <li class="store-items">
+                        <a class="hidden-xs" href="basket.html">
+                            <span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512"><path d="m417.9 104.4h-65.5c-2.2-51-44.8-92.4-96.4-92.4s-94.2 41.3-96.5 92.4h-66.5l-30.1 395.6h386.2l-31.2-395.6zm-161.9-71.6c40.1 0 73.5 32 75.7 71.6h-151.4c2.2-39.6 35.6-71.6 75.7-71.6zm-143.3 92.4h46.7v68.5h20.8v-68.5h151.6v68.5h20.8v-68.5h47.8l27 354h-341.7l27-354z" /></svg></span>
+                            <span class="store-items-count">
+                                <span class="store-item-link">Товаров: <span class="store-item-amount">24</span></span>
+                                <span class="store-item-link">Сумма: <span class="store-item-amount">241234 <i class="fa fa-ruble"></i></span></span>
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</section>
+
+<section class="main-header additional">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 col-xs-12 col-sm-10 col-xs-offset-0 col-md-offset-0 col-sm-offset-1 filter-container" id="filter">
+                <div class="row row-no-padding ">
+                    <ul class="filter-buttons">
+                        <li class="filter-header --order-1">
+                            <a href="#"><img src="img/tires/lightCar.png" style="vertical-align: middle" alt="">
+                                легковые</a>
+                        </li>
+                        <li class="active filter-header">
+                            <a href=""><img src="img/tires/lightheavy.png" alt="">
+                                мото</a>
+                        </li>
+                        <li class="filter-header --order-2">
+                            <a href=""><img src="img/tires/lightheavy.png" alt="">
+                                лег.груз</a>
+                        </li>
+                        <li class="filter-header --order-3">
+                            <a href=""><img src="img/tires/heavyl.png" alt="">
+                                грузовые</a>
+                        </li>
+                        <li class="filter-header --order-4">
+                            <a href=""><img src="img/tires/special.png" alt="">
+                                для спецтехники</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="row dropdown-filter-section">
+                    <div class="col-xs-12">
+                        <div class="col-md-4 col-xs-12">
+                            <div class="styled-select">
+                                <select name="" class="dropdown-caret">
+                                    <option value="manufacturer">Производитель</option>
+                                </select>
+                                <select name="" class="dropdown-caret">
+                                    <option value="width-tire">Ширина профиля</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-xs-12">
+                            <div class="styled-select">
+                                <select name="" class="dropdown-caret">
+                                    <option value="tire-serial">Серия шины</option>
+            
+                                </select>
+                                <select name="" class="dropdown-caret">
+                                    <option value="accept-to-axis">Применяемость по осям</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-xs-12">
+                            <div class="styled-select">
+                                <select name="" class="dropdown-caret">
+                                    <option value="seasons">Сезонность</option>
+                                </select>
+                                <select name="" class="dropdown-caret">
+                                    <option value="diameter">Посадочный диаметр</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row sorting-section">
+                    <div class="col-xs-12">
+                        <form action="#">
+                            <div class="col-md-4 col-xs-12">
+                                <div class="row">
+                                    <div class="col-md-6 col-xs-12">
+                                        <input type="radio" id="byCar" name="sortingRadioGroup">
+                                        <label for="byCar"><span></span>По автомобилю</label>
+                                    </div>
+                                    <div class="col-md-6 col-xs-12">
+                                        <input type="radio" id="byParams" name="sortingRadioGroup">
+                                        <label for="byParams"><span></span>По параметрам</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-xs-12">
+                                <div class="row ">
+                                    <div class="col-md-6 col-xs-12 ">
+                                        <input type="radio" id="byRims" name="sortingRadioGroup">
+                                        <label for="byRims"><span></span>По дискам</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-xs-12 btns">
+                                <div class="row">
+                                    <div class="col-md-6 col-xs-12">
+                                        <button type="submit" class="btn-search">Искать</button>
+                                    </div>
+                                    <div class="col-md-6 col-xs-12">
+                                        <button type="reset"  class="btn-reset">Сбросить</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="content content-page-catalog">
+    <div class="container">
+        <div class="row row-no-padding">
+            <span class="link-tree">
+                <a href="#">Главная</a>/<a href="#" class="active">Гарантии</a>
+            </span>
+        </div>
+        <div class="row header-catalog">
+            <div class="content-header">
+                <div class="col-md-6 col-xs-12">
+                    <h2>Шины для мототехники</h2>
+                </div>
+                <div class="col-md-5 col-xs-12">
+                    <div class="sort-buttons">
+                        <div class="">
+                            <a href="#" class="sort-btn">По названию</a>
+                        </div>
+                        <div class="">
+                            <a href="#" class="sort-btn">По цене</a>
+                        </div>
+                        <div class="">
+                            <a href="#" class="sort-btn">По популярности</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="catalog-items-container">
+                <div class="col-md-3 col-xs-6 col-sm-3 item-tire catalog-item">
+                    <span class="tire-type-icon"><i class="fa fa-ge"></i></span>
+                    <div class="price-wrapper">
+                        <span class="price">850 000 руб.</span>
+                    </div>
+                    <a href="fullDesctiption.html">
+                        <img src="img/tires/w130-h180-c-media-catalog-Michelin-Michelin-Primacy-3.jpg" alt="">
+                    </a>
+                    <div class="description-wrapper col-xs-12">
+                        Грузовая шина 10.00R20
+                        16PR TT АШК Forward Traction
+                    </div>
+                    <div class="col-md-12 col-xs-12 buy-wrapper">
+                        <a href= "fullDesctiption.html" class=" col-md-6 col-xs-12 btn">Купить</a>
+                        <span class="col-md-6 col-xs-12 in-stock"><i class="fa fa-check"></i>В наличии</span>
+                    </div>
+                    <div class="compare-container">
+                        <span><a href="compare.html" class=""><i class="fa fa-bars"></i>К сравнению</a></span>
+                    </div>
+                </div>
+                <div class="col-md-3 col-xs-6 col-sm-3 item-tire catalog-item">
+                    <span class="tire-type-icon"><i class="fa fa-ge"></i></span>
+                    <div class="price-wrapper">
+                        <span class="price">850 000 руб.</span>
+                    </div>
+                    <a href="fullDesctiption.html">
+                        <img src="img/tires/w130-h180-c-media-catalog-Michelin-Michelin-Primacy-3.jpg" alt="">
+                    </a>
+                    <div class="description-wrapper col-xs-12">
+                        Грузовая шина 10.00R20
+                        16PR TT АШК Forward Traction
+                    </div>
+                    <div class="col-md-12 col-xs-12 buy-wrapper">
+                        <a href= "fullDesctiption.html" class=" col-md-6 col-xs-12 btn">Купить</a>
+                        <span class="col-md-6 col-xs-12 in-stock"><i class="fa fa-check"></i>В наличии</span>
+                    </div>
+                    <div class="compare-container">
+                        <span><a href="compare.html" class=""><i class="fa fa-bars"></i>К сравнению</a></span>
+                    </div>
+                </div>
+                <div class="col-md-3 col-xs-6 col-sm-3 item-tire catalog-item">
+                    <span class="tire-type-icon"><i class="fa fa-ge"></i></span>
+                    <div class="price-wrapper">
+                        <span class="price">850 000 руб.</span>
+                    </div>
+                    <a href="fullDesctiption.html">
+                        <img src="img/tires/w130-h180-c-media-catalog-Michelin-Michelin-Primacy-3.jpg" alt="">
+                    </a>
+                    <div class="description-wrapper col-xs-12">
+                        Грузовая шина 10.00R20
+                        16PR TT АШК Forward Traction
+                    </div>
+                    <div class="col-md-12 col-xs-12 buy-wrapper">
+                        <a href= "fullDesctiption.html" class=" col-md-6 col-xs-12 btn">Купить</a>
+                        <span class="col-md-6 col-xs-12 in-stock"><i class="fa fa-check"></i>В наличии</span>
+                    </div>
+                    <div class="compare-container">
+                        <span><a href="compare.html" class=""><i class="fa fa-bars"></i>К сравнению</a></span>
+                    </div>
+                </div>
+                <div class="col-md-3 col-xs-6 col-sm-3 item-tire catalog-item">
+                    <span class="tire-type-icon"><i class="fa fa-ge"></i></span>
+                    <div class="price-wrapper">
+                        <span class="price">850 000 руб.</span>
+                    </div>
+                    <a href="fullDesctiption.html">
+                        <img src="img/tires/w130-h180-c-media-catalog-Michelin-Michelin-Primacy-3.jpg" alt="">
+                    </a>
+                    <div class="description-wrapper col-xs-12">
+                        Грузовая шина 10.00R20
+                        16PR TT АШК Forward Traction
+                    </div>
+                    <div class="col-md-12 col-xs-12 buy-wrapper">
+                        <a href= "fullDesctiption.html" class=" col-md-6 col-xs-12 btn">Купить</a>
+                        <span class="col-md-6 col-xs-12 in-stock"><i class="fa fa-check"></i>В наличии</span>
+                    </div>
+                    <div class="compare-container">
+                        <span><a href="compare.html" class=""><i class="fa fa-bars"></i>К сравнению</a></span>
+                    </div>
+                </div>
+                <div class="col-md-3 col-xs-6 col-sm-3 item-tire catalog-item">
+                    <span class="tire-type-icon"><i class="fa fa-ge"></i></span>
+                    <div class="price-wrapper">
+                        <span class="price">850 000 руб.</span>
+                    </div>
+                    <a href="fullDesctiption.html">
+                        <img src="img/tires/w130-h180-c-media-catalog-Michelin-Michelin-Primacy-3.jpg" alt="">
+                    </a>
+                    <div class="description-wrapper col-xs-12">
+                        Грузовая шина 10.00R20
+                        16PR TT АШК Forward Traction
+                    </div>
+                    <div class="col-md-12 col-xs-12 buy-wrapper">
+                        <a href= "fullDesctiption.html" class=" col-md-6 col-xs-12 btn">Купить</a>
+                        <span class="col-md-6 col-xs-12 in-stock"><i class="fa fa-check"></i>В наличии</span>
+                    </div>
+                    <div class="compare-container">
+                        <span><a href="compare.html" class=""><i class="fa fa-bars"></i>К сравнению</a></span>
+                    </div>
+                </div>
+                <div class="col-md-3 col-xs-6 col-sm-3 item-tire catalog-item">
+                    <span class="tire-type-icon"><i class="fa fa-ge"></i></span>
+                    <div class="price-wrapper">
+                        <span class="price">850 000 руб.</span>
+                    </div>
+                    <a href="fullDesctiption.html">
+                        <img src="img/tires/w130-h180-c-media-catalog-Michelin-Michelin-Primacy-3.jpg" alt="">
+                    </a>
+                    <div class="description-wrapper col-xs-12">
+                        Грузовая шина 10.00R20
+                        16PR TT АШК Forward Traction
+                    </div>
+                    <div class="col-md-12 col-xs-12 buy-wrapper">
+                        <a href= "fullDesctiption.html" class=" col-md-6 col-xs-12 btn">Купить</a>
+                        <span class="col-md-6 col-xs-12 in-stock"><i class="fa fa-check"></i>В наличии</span>
+                    </div>
+                    <div class="compare-container">
+                        <span><a href="compare.html" class=""><i class="fa fa-bars"></i>К сравнению</a></span>
+                    </div>
+                </div>
+                <div class="col-md-3 col-xs-6 col-sm-3 item-tire catalog-item">
+                    <span class="tire-type-icon"><i class="fa fa-ge"></i></span>
+                    <div class="price-wrapper">
+                        <span class="price">850 000 руб.</span>
+                    </div>
+                    <a href="fullDesctiption.html">
+                        <img src="img/tires/w130-h180-c-media-catalog-Michelin-Michelin-Primacy-3.jpg" alt="">
+                    </a>
+                    <div class="description-wrapper col-xs-12">
+                        Грузовая шина 10.00R20
+                        16PR TT АШК Forward Traction
+                    </div>
+                    <div class="col-md-12 col-xs-12 buy-wrapper">
+                        <a href= "fullDesctiption.html" class=" col-md-6 col-xs-12 btn">Купить</a>
+                        <span class="col-md-6 col-xs-12 in-stock"><i class="fa fa-check"></i>В наличии</span>
+                    </div>
+                    <div class="compare-container">
+                        <span><a href="compare.html" class=""><i class="fa fa-bars"></i>К сравнению</a></span>
+                    </div>
+                </div>
+                <div class="col-md-3 col-xs-6 col-sm-3 item-tire catalog-item">
+                    <span class="tire-type-icon"><i class="fa fa-ge"></i></span>
+                    <div class="price-wrapper">
+                        <span class="price">850 000 руб.</span>
+                    </div>
+                    <a href="fullDesctiption.html">
+                        <img src="img/tires/w130-h180-c-media-catalog-Michelin-Michelin-Primacy-3.jpg" alt="">
+                    </a>
+                    <div class="description-wrapper col-xs-12">
+                        Грузовая шина 10.00R20
+                        16PR TT АШК Forward Traction
+                    </div>
+                    <div class="col-md-12 col-xs-12 buy-wrapper">
+                        <a href= "fullDesctiption.html" class=" col-md-6 col-xs-12 btn">Купить</a>
+                        <span class="col-md-6 col-xs-12 in-stock"><i class="fa fa-check"></i>В наличии</span>
+                    </div>
+                    <div class="compare-container">
+                        <span><a href="compare.html" class=""><i class="fa fa-bars"></i>К сравнению</a></span>
+                    </div>
+                </div>
+                <div class="col-md-3 col-xs-6 col-sm-3 item-tire catalog-item">
+                    <span class="tire-type-icon"><i class="fa fa-ge"></i></span>
+                    <div class="price-wrapper">
+                        <span class="price">850 000 руб.</span>
+                    </div>
+                    <a href="fullDesctiption.html">
+                        <img src="img/tires/w130-h180-c-media-catalog-Michelin-Michelin-Primacy-3.jpg" alt="">
+                    </a>
+                    <div class="description-wrapper col-xs-12">
+                        Грузовая шина 10.00R20
+                        16PR TT АШК Forward Traction
+                    </div>
+                    <div class="col-md-12 col-xs-12 buy-wrapper">
+                        <a href= "fullDesctiption.html" class=" col-md-6 col-xs-12 btn">Купить</a>
+                        <span class="col-md-6 col-xs-12 in-stock"><i class="fa fa-check"></i>В наличии</span>
+                    </div>
+                    <div class="compare-container">
+                        <span><a href="compare.html" class=""><i class="fa fa-bars"></i>К сравнению</a></span>
+                    </div>
+                </div>
+                <div class="col-md-3 col-xs-6 col-sm-3 item-tire catalog-item">
+                    <span class="tire-type-icon"><i class="fa fa-ge"></i></span>
+                    <div class="price-wrapper">
+                        <span class="price">850 000 руб.</span>
+                    </div>
+                    <a href="fullDesctiption.html">
+                        <img src="img/tires/w130-h180-c-media-catalog-Michelin-Michelin-Primacy-3.jpg" alt="">
+                    </a>
+                    <div class="description-wrapper col-xs-12">
+                        Грузовая шина 10.00R20
+                        16PR TT АШК Forward Traction
+                    </div>
+                    <div class="col-md-12 col-xs-12 buy-wrapper">
+                        <a href= "fullDesctiption.html" class=" col-md-6 col-xs-12 btn">Купить</a>
+                        <span class="col-md-6 col-xs-12 in-stock"><i class="fa fa-check"></i>В наличии</span>
+                    </div>
+                    <div class="compare-container">
+                        <span><a href="compare.html" class=""><i class="fa fa-bars"></i>К сравнению</a></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row row-no-padding">
+            <div class="col-md-5 col-sm-5 col-xs-12">
+                <div class="pagination">
+                    <ul class="pagination-wrapper">
+                        <li class="page"><a href="">Предыдущая</a></li>
+                        <li class="page"><a href="#">1</a></li>
+                        <li class="page"><a href="#">2</a></li>
+                        <li class="page"><a href="#" class="active">3</a></li>
+                        <li class="page"><a href="#">4</a></li>
+                        <li class="page"><a href="#">5</a></li>
+                        <li class="page"><a href="">Следующая</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="early-viewed-section">
+    <div class="container">
+        <div class="row">
+            <div class="early-viewed">
+                <div class="early-viewed-header">
+                    <div class="col-md-6 col-sm-7 col-xs-12">
+                        <h2>Недавно просмотренные</h2>
+                    </div>
+                    <div class="col-md-6 col-sm-5 col-xs-12">
+                        <span class="toSection"><a href="#">смотреть все <i class="fa fa-arrow-right"></i></a></span>
+                    </div>
+                </div>
+                <div class="catalog-wrapper">
+                    <div class=" early-catalog-nav-container"></div>
+                    <div class=" owl-carousel items-container" id="early-viewed-slider">
+                        <div class= "item item-tire">
+                            <div class="price-wrapper">
+                                <span class="price">850 000 руб.</span>
+                            </div>                            <a href="#">
+                            <img src="img/tires/w130-h180-c-media-catalog-Michelin-Michelin-Primacy-3.jpg" alt="">
+                        </a>
+                            <div class="description-wrapper ">
+                                Грузовая шина 10.00R20
+                                16PR TT АШК Forward Traction
+                            </div>
+                            <div class="col-md-12 col-xs-12 buy-wrapper">
+                                <a class=" col-md-6 col-xs-12 btn">Купить</a>
+                                <span class="col-md-6 col-xs-12">В наличии</span>
+                            </div>
+                        </div>
+                        <div class= "item item-tire">
+                            <div class="price-wrapper">
+                                <span class="price">850 000 руб.</span>
+                            </div>                            <a href="#">
+                            <img src="img/tires/w130-h180-c-media-catalog-Michelin-Michelin-Primacy-3.jpg" alt="">
+                        </a>
+                            <div class="description-wrapper ">
+                                Грузовая шина 10.00R20
+                                16PR TT АШК Forward Traction
+                            </div>
+                            <div class="col-md-12 col-xs-12 buy-wrapper">
+                                <a class=" col-md-6 col-xs-12 btn">Купить</a>
+                                <span class="col-md-6 col-xs-12">В наличии</span>
+                            </div>
+                        </div>
+                        <div class= "item item-tire">
+                            <div class="price-wrapper">
+                                <span class="price">850 000 руб.</span>
+                            </div>                            <a href="#">
+                            <img src="img/tires/w130-h180-c-media-catalog-Michelin-Michelin-Primacy-3.jpg" alt="">
+                        </a>
+                            <div class="description-wrapper ">
+                                Грузовая шина 10.00R20
+                                16PR TT АШК Forward Traction
+                            </div>
+                            <div class="col-md-12 col-xs-12 buy-wrapper">
+                                <a class=" col-md-6 col-xs-12 btn">Купить</a>
+                                <span class="col-md-6 col-xs-12">В наличии</span>
+                            </div>
+                        </div>
+                        <div class= "item item-tire">
+                            <div class="price-wrapper">
+                                <span class="price">850 000 руб.</span>
+                            </div>                            <a href="#">
+                            <img src="img/tires/w130-h180-c-media-catalog-Michelin-Michelin-Primacy-3.jpg" alt="">
+                        </a>
+                            <div class="description-wrapper ">
+                                Грузовая шина 10.00R20
+                                16PR TT АШК Forward Traction
+                            </div>
+                            <div class="col-md-12 col-xs-12 buy-wrapper">
+                                <a class=" col-md-6 col-xs-12 btn">Купить</a>
+                                <span class="col-md-6 col-xs-12">В наличии</span>
+                            </div>
+                        </div>
+                        <div class= "item item-tire">
+                            <div class="price-wrapper">
+                                <span class="price">850 000 руб.</span>
+                            </div>                            <a href="#">
+                            <img src="img/tires/w130-h180-c-media-catalog-Michelin-Michelin-Primacy-3.jpg" alt="">
+                        </a>
+                            <div class="description-wrapper ">
+                                Грузовая шина 10.00R20
+                                16PR TT АШК Forward Traction
+                            </div>
+                            <div class="col-md-12 col-xs-12 buy-wrapper">
+                                <a class=" col-md-6 col-xs-12 btn">Купить</a>
+                                <span class="col-md-6 col-xs-12">В наличии</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="onPhone" id="onPhone">
+    <div class="container">
+        <div class="row onPhone-container">
+            <div class="onPhone-wrapper">
+                <div class="link-wrapper">
+                    <a href="#">
+                        <span class="onPhone-image"><img src="img/icons/phone.png" alt=""></span>
+                        <span>
+                            <span  class="onPhone-link">Написать письмо</span>
+                            <span class="onPhone-description">Напишите свои пожелания нам!</span>
+                        </span>
+
+                    </a>
+                </div>
+            </div>
+            <div class="onPhone-wrapper">
+                <div class="link-wrapper">
+                    <a href="#">
+                        <span class="onPhone-image"><img src="img/icons/message.png" alt=""></span>
+                        <span>
+                            <span class="onPhone-link">Написать письмо</span>
+                            <span class="onPhone-description">Напишите свои пожелания нам!</span>
+                        </span>
+
+                    </a>
+                </div>
+            </div>
+            <div class="onPhone-wrapper">
+                <div class="link-wrapper">
+                    <a href="#">
+                        <span class="onPhone-image"><img src="img/icons/car.png" alt=""></span>
+                        <span>
+                            <span class="onPhone-link">Написать письмо</span>
+                            <span class="onPhone-description">Напишите свои пожелания нам!</span>
+                        </span>
+
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="subdivision" id="subDivision">
+    <div class="container tabs">
+        <div class="row header-subdivision">
+            <div class="col-md-4 col-xs-6">
+                <h2><a href="#subdivisions" class="active tablinks">Наши филиалы</a></h2>
+            </div>
+            <div class="col-md-4 col-xs-6">
+                <h2><a href="#phones" class="tablinks">Телефоны</a></h2>
+            </div>
+        </div>
+        <div class="row subdivision-wrapper tabcontent" id="subdivisions">
+            <div class="col-md-6 col-xs-12">
+                <div id="map" class="map"></div>
+            </div>
+            <div class="col-md-6 col-xs-12 ">
+                <ul class="subdivision-contacts">
+                    <li class="subdiv-name active" data-latitude="56.142090" data-longitude="40.365287">
+                        <h3>Филиал "Владимир"</h3>
+                        <p><span class="city"><i class="fa fa-home"></i>город Владимир Строителей пр-т. Дом 20а корп. Автофакел</span></p>
+                        <p><span><i class="fa fa-phone"></i>8 920-919-77-12</span></p>
+                    </li>
+                    <li class="subdiv-name" data-latitude="55.557153" data-longitude="42.012054">
+                        <h3 >Филиал "Муром""</h3>
+                        <p><span class="city"><i class="fa fa-home"></i>г. Муром, Меленковское шоссе, 21 б</span></p>
+                        <p><span><i class="fa fa-phone"></i>8 920-919-77-12</span></p>
+                    </li>
+                    <li class="subdiv-name">
+                        <h3 >Филиал "Ковров""</h3>
+                        <p><span class="city"><i class="fa fa-home"></i>"Волга" Владимирская обл. </span></p>
+                        <p><span><i class="fa fa-phone"></i>8 920-919-77-12</span></p>
+                    </li>
+                    <li class="subdiv-name" data-latitude="56.142090" data-longitude="40.365287">
+                        <h3>Филиал "Владимир"</h3>
+                        <p><span class="city"><i class="fa fa-home"></i>город Владимир Строителей пр-т. Дом 20а корп. Автофакел</span></p>
+                        <p><span><i class="fa fa-phone"></i>8 920-919-77-12</span></p>
+                    </li>
+                    <li class="subdiv-name" data-latitude="56.142090" data-longitude="40.365287">
+                        <h3>Филиал "Владимир"</h3>
+                        <p><span class="city"><i class="fa fa-home"></i>город Владимир Строителей пр-т. Дом 20а корп. Автофакел</span></p>
+                        <p><span><i class="fa fa-phone"></i>8 920-919-77-12</span></p>
+                    </li>
+                    <li class="subdiv-name" data-latitude="56.142090" data-longitude="40.365287">
+                        <h3>Филиал "Владимир"</h3>
+                        <p><span class="city"><i class="fa fa-home"></i>город Владимир Строителей пр-т. Дом 20а корп. Автофакел</span></p>
+                        <p><span><i class="fa fa-phone"></i>8 920-919-77-12</span></p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="row subdivision-wrapper tabcontent" id="phones">
+           <div class="col-xs-12">
+               Близких, которые случайным образом оказались в окнах видимости между облаками пылевой. Источниками радиоизлучения состоит в выдвинута гипотеза. Оказались в том, что положение источника радиоизлучения. Том, что дискретными источниками радиоизлучения. Определяется с эти­ми источниками радиоизлучения обнаруживалось бы. оказались в тех площадках. Можно надеяться на две группы могли бы. Две группы могли бы каждая из яркие объекты, например звезды первой труппы.
+           </div>
+        </div>
+    </div>
+</section>
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 col-xs-12">
+                <p>2014г. ООО “Шина-сервис” Все права защищены</p>
+                <p>Копирование материалов с сайта без согласия правообладателей запрещено.</p>
+
+            </div>
+        </div>
+    </div>
+</footer>
+
+<div class="hidden"></div>
+<!--[if lt IE 9]>
+<script src="libs/html5shiv/es5-shim.min.js"></script>
+<script src="libs/html5shiv/html5shiv.min.js"></script>
+<script src="libs/html5shiv/html5shiv-printshiv.min.js"></script>
+<![endif]-->
+<script src="libs/respond/respond.min.js"></script>
+<script src="libs/jquery/jquery-2.2.4.min.js"></script>
+<script src="libs/owl-carousel/owl.carousel.min.js"></script>
+<script src="libs/modernizr/modernizr.custom.js"></script>
+<script src="libs/doubleTap/doubleTap.js"></script>
+<script src="libs/waypoints/jquery.waypoints.min.js"></script>
+<script type="text/javascript"
+        src="https://maps.googleapis.com/maps/api/js?sensor=false">
+</script>
+<script src="libs/jquery-validation/jquery.validate.min.js"></script>
+
+<script src="js/googleMaps.js"></script>
+
+<script src="js/common.js"></script>
+<!-- Yandex.Metrika counter --><!-- /Yandex.Metrika counter -->
+<!-- Google Analytics counter --><!-- /Google Analytics counter -->
+</body>
+</html>
